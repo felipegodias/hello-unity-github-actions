@@ -1,12 +1,13 @@
-﻿name: MacOS Build
+﻿name: iOS Build
 on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - uses: game-ci/unity-builder@v2
         with:
+          targetPlatform: iOS
           buildMethod: HelloUnityBuilder.BuildIOS
