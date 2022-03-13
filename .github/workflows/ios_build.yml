@@ -8,5 +8,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - uses: game-ci/unity-builder@v2
-          with:
-            buildMethod: HelloUnityBuilder.BuildIOS
+        with:
+          buildMethod: HelloUnityBuilder.BuildIOS
