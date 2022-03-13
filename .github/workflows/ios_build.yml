@@ -1,0 +1,12 @@
+﻿name: MacOS Build
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: game-ci/unity-builder@v2
+          with:
+            buildMethod: HelloUnityBuilder.BuildIOS
